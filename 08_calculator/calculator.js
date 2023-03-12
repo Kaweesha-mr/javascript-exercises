@@ -19,25 +19,55 @@ const sum = function(array) {
     return 0;
   }
 
-  for(let i =0; i < array.length; i++){
+  for(let i =0; i < array.length; i+=1){
 
-    sum = sum + array;
+    sum = sum + array[i];
   }
   return parseInt(sum);
   
 };
 
-const multiply = function(number1,number2) {
+const multiply = function(array) {
 
-  return number1 * number2;
+  let mul = 1;
+  for(let i =0; i < array.length; i+=1){
+
+    mul = mul * array[i];
+  }
+  return parseInt(mul);
 
 };
 
-const power = function() {
+const power = function(N1,N2) {
+
+  return N1 ** N2;
 	
 };
 
-const factorial = function() {
+const factorial = function(number) {
+
+
+  let final =1;
+  
+  if(number ==1){
+
+    return 1;
+  }
+
+  let count = number;
+  for(let i =0; i<number;i++){
+
+    final = final * (count * count-1);
+    
+    count--;
+
+    if(count == 1){
+
+      return final;
+    }
+  }
+
+  return final;
 	
 };
 
